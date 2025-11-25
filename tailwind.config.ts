@@ -13,7 +13,14 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ['Orbitron', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
       colors: {
+        'cyan-glow': 'hsl(var(--cyan-glow))',
+        'purple-deep': 'hsl(var(--purple-deep))',
+        'blue-deep': 'hsl(var(--blue-deep))',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
