@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, BookOpen } from "lucide-react";
 
@@ -29,14 +30,16 @@ export const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button 
-            size="lg" 
-            variant="hero"
-            className="group text-lg px-8 py-6 glow-cyan"
-          >
-            Explore Demo
-            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          <Link to="/demo">
+            <Button 
+              size="lg" 
+              variant="hero"
+              className="group text-lg px-8 py-6 glow-cyan"
+            >
+              Explore Demo
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
           
           <Button 
             size="lg" 
