@@ -5,10 +5,12 @@ import { Features } from "@/components/sections/Features";
 import { Team } from "@/components/sections/Team";
 import { Research } from "@/components/sections/Research";
 import { Footer } from "@/components/sections/Footer";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <ThemeToggle />
       <Hero />
       <About />
       <Technology />

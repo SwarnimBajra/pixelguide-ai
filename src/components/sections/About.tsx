@@ -3,25 +3,25 @@ import { Target, Lightbulb, TrendingUp } from "lucide-react";
 
 export const About = () => {
   return (
-    <section id="about" className="py-24 px-4 relative">
+    <section id="about" className="py-24 px-4 border-t">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Redefining <span className="gradient-text">3D Reconstruction</span>
+          <h2 className="text-5xl md:text-6xl font-bold mb-6">
+            Redefining 3D Reconstruction
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Horizon bridges the gap between cutting-edge research and practical deployment, 
             making photorealistic 3D scene generation accessible on modest hardware
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
-          <Card className="p-6 bg-gradient-to-br from-card to-card/50 border-cyan-glow/20 hover:border-cyan-glow/40 transition-all duration-300 group">
-            <div className="w-12 h-12 rounded-lg bg-cyan-glow/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <Target className="h-6 w-6 text-cyan-glow" />
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <Card className="p-8 border-2">
+            <div className="w-14 h-14 rounded-sm border-2 border-primary flex items-center justify-center mb-6">
+              <Target className="h-7 w-7" />
             </div>
-            <h3 className="text-xl font-bold mb-2">Objectives</h3>
-            <ul className="space-y-2 text-muted-foreground">
+            <h3 className="text-2xl font-bold mb-4">Objectives</h3>
+            <ul className="space-y-3 text-muted-foreground">
               <li>• Develop working NVS pipeline</li>
               <li>• Optimize for modest hardware</li>
               <li>• Achieve high quality & efficiency</li>
@@ -29,31 +29,31 @@ export const About = () => {
             </ul>
           </Card>
 
-          <Card className="p-6 bg-gradient-to-br from-card to-card/50 border-purple-deep/20 hover:border-purple-deep/40 transition-all duration-300 group">
-            <div className="w-12 h-12 rounded-lg bg-purple-deep/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <Lightbulb className="h-6 w-6 text-purple-deep" />
+          <Card className="p-8 border-2">
+            <div className="w-14 h-14 rounded-sm border-2 border-primary flex items-center justify-center mb-6">
+              <Lightbulb className="h-7 w-7" />
             </div>
-            <h3 className="text-xl font-bold mb-2">Motivation</h3>
-            <p className="text-muted-foreground">
+            <h3 className="text-2xl font-bold mb-4">Motivation</h3>
+            <p className="text-muted-foreground leading-relaxed">
               Making NVS practical for VR, AR, gaming, and immersive media by addressing 
               computational limitations and accessibility barriers
             </p>
           </Card>
 
-          <Card className="p-6 bg-gradient-to-br from-card to-card/50 border-cyan-glow/20 hover:border-cyan-glow/40 transition-all duration-300 group">
-            <div className="w-12 h-12 rounded-lg bg-cyan-glow/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <TrendingUp className="h-6 w-6 text-cyan-glow" />
+          <Card className="p-8 border-2">
+            <div className="w-14 h-14 rounded-sm border-2 border-primary flex items-center justify-center mb-6">
+              <TrendingUp className="h-7 w-7" />
             </div>
-            <h3 className="text-xl font-bold mb-2">Impact</h3>
-            <p className="text-muted-foreground">
+            <h3 className="text-2xl font-bold mb-4">Impact</h3>
+            <p className="text-muted-foreground leading-relaxed">
               Bridging research and real-world applications through efficiency, 
               adaptability, and performance on standard hardware
             </p>
           </Card>
         </div>
 
-        <Card className="p-8 bg-gradient-to-br from-card to-card/50 border-purple-deep/20">
-          <h3 className="text-2xl font-bold mb-4">Background</h3>
+        <Card className="p-10 border-2">
+          <h3 className="text-3xl font-bold mb-6">Background</h3>
           <div className="text-muted-foreground space-y-4 leading-relaxed">
             <p>
               Neural Radiance Fields (NeRF) revolutionized 3D scene reconstruction by demonstrating 
