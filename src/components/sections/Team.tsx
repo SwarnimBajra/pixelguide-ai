@@ -11,11 +11,11 @@ export const Team = () => {
   ];
 
   return (
-    <section id="team" className="py-24 px-4 relative bg-gradient-to-b from-blue-deep/20 to-transparent">
+    <section id="team" className="py-24 px-4 border-t">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Meet the <span className="gradient-text">Team</span>
+          <h2 className="text-5xl md:text-6xl font-bold mb-6">
+            Meet the Team
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Computer Engineering students at Kathmandu University
@@ -26,22 +26,22 @@ export const Team = () => {
           {team.map((member, index) => (
             <Card 
               key={index}
-              className="p-6 bg-gradient-to-br from-card to-card/50 border-cyan-glow/20 hover:border-purple-deep/40 transition-all duration-300 group hover:scale-105"
+              className="p-6 border-2 hover:shadow-lg transition-shadow"
             >
               <div className="text-center">
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-cyan-glow to-purple-deep mx-auto mb-4 flex items-center justify-center text-2xl font-bold">
+                <div className="w-20 h-20 rounded-sm border-2 border-primary mx-auto mb-4 flex items-center justify-center text-2xl font-bold bg-muted">
                   {member.name.split(' ').map(n => n[0]).join('')}
                 </div>
                 <h3 className="text-xl font-bold mb-1">{member.name}</h3>
                 <p className="text-muted-foreground text-sm mb-4">Roll No: {member.roll}</p>
                 <div className="flex justify-center space-x-2">
-                  <Button size="icon" variant="ghost" className="h-8 w-8 hover:text-cyan-glow">
+                  <Button size="icon" variant="ghost" className="h-8 w-8">
                     <Github className="h-4 w-4" />
                   </Button>
-                  <Button size="icon" variant="ghost" className="h-8 w-8 hover:text-cyan-glow">
+                  <Button size="icon" variant="ghost" className="h-8 w-8">
                     <Linkedin className="h-4 w-4" />
                   </Button>
-                  <Button size="icon" variant="ghost" className="h-8 w-8 hover:text-cyan-glow">
+                  <Button size="icon" variant="ghost" className="h-8 w-8">
                     <Mail className="h-4 w-4" />
                   </Button>
                 </div>
@@ -50,16 +50,16 @@ export const Team = () => {
           ))}
         </div>
 
-        <Card className="p-8 bg-gradient-to-br from-card to-card/50 border-cyan-glow/20 text-center">
-          <h3 className="text-2xl font-bold mb-2">Academic Affiliation</h3>
-          <p className="text-lg text-muted-foreground mb-2">
+        <Card className="p-10 border-2 text-center">
+          <h3 className="text-3xl font-bold mb-3">Academic Affiliation</h3>
+          <p className="text-xl text-muted-foreground mb-2">
             <span className="font-semibold text-foreground">Kathmandu University</span>
           </p>
           <p className="text-muted-foreground mb-1">Department of Computer Science and Engineering</p>
-          <p className="text-muted-foreground mb-4">Dhulikhel, Kavre, Nepal</p>
-          <div className="inline-block px-4 py-2 rounded-lg bg-cyan-glow/10 border border-cyan-glow/30">
-            <p className="text-sm">
-              <span className="font-semibold">Project Advisor:</span> Mr. Suman Shrestha
+          <p className="text-muted-foreground mb-6">Dhulikhel, Kavre, Nepal</p>
+          <div className="inline-block px-6 py-3 rounded-sm border-2 border-primary bg-muted">
+            <p className="text-sm font-medium">
+              <span className="font-bold">Project Advisor:</span> Mr. Suman Shrestha
             </p>
           </div>
         </Card>
