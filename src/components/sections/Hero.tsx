@@ -1,54 +1,33 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Github, BookOpen } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 py-16 border-b">
-      <div className="container relative z-10 mx-auto max-w-3xl">
-        <div className="inline-block mb-6 px-4 py-1.5 border border-primary bg-background">
-          <p className="text-xs uppercase tracking-widest font-medium">Neural Radiance Fields • 3D Gaussian Splatting</p>
-        </div>
+    <section className="min-h-[80vh] flex items-center px-4 py-12">
+      <div className="w-full max-w-lg mx-auto">
+        <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">
+          NeRF • 3DGS
+        </p>
 
-        <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">
+        <h1 className="text-3xl font-bold mb-3">
           Horizon
         </h1>
 
-        <p className="text-lg md:text-xl mb-4 font-semibold">
-          Photorealistic 3D Scene Reconstruction from RGB Images
+        <p className="text-sm text-muted-foreground mb-8 leading-relaxed">
+          Photorealistic 3D scene reconstruction from RGB images using Neural Radiance Fields and Gaussian Splatting
         </p>
 
-        <p className="text-sm md:text-base text-muted-foreground mb-10 leading-relaxed max-w-2xl">
-          A lightweight, efficient pipeline leveraging NeRF and Gaussian Splatting for 
-          high-quality novel view synthesis on modest hardware
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-3 items-start">
+        <div className="flex flex-col gap-2">
           <Link to="/demo">
-            <Button 
-              size="default" 
-              variant="default"
-              className="group"
-            >
-              Explore Demo
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
+            <Button size="sm" className="w-full">
+              Demo
+              <ArrowRight className="ml-2 h-3 w-3" />
             </Button>
           </Link>
           
-          <Button 
-            size="default" 
-            variant="outline"
-          >
-            <Github className="mr-2 h-4 w-4" />
-            View on GitHub
-          </Button>
-          
-          <Button 
-            size="default" 
-            variant="ghost"
-          >
-            <BookOpen className="mr-2 h-4 w-4" />
-            Read Paper
+          <Button size="sm" variant="outline" className="w-full">
+            GitHub
           </Button>
         </div>
       </div>
