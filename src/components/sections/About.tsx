@@ -1,8 +1,8 @@
 export const About = () => {
   return (
-    <section id="about" className="py-12 px-4 border-t">
-      <div className="max-w-lg mx-auto">
-        <h2 className="text-xl font-bold mb-4">About</h2>
+    <section id="about" className="py-8 px-4 border-t">
+      <div className="max-w-md mx-auto">
+        <h2 className="text-lg font-bold mb-3">About</h2>
         
         <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
           <p>

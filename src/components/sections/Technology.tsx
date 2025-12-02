@@ -6,9 +6,9 @@ export const Technology = () => {
   ];
 
   return (
-    <section id="technology" className="py-12 px-4 border-t">
-      <div className="max-w-lg mx-auto">
-        <h2 className="text-xl font-bold mb-4">Technology</h2>
+    <section id="technology" className="py-8 px-4 border-t">
+      <div className="max-w-md mx-auto">
+        <h2 className="text-lg font-bold mb-3">Technology</h2>
         
         <div className="space-y-4 text-sm">
           <div className="py-3 border-b">
