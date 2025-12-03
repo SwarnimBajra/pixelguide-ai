@@ -7,17 +7,17 @@ export const Research = () => {
   ];
 
   return (
-    <section id="research" className="py-8 px-4 border-t">
-      <div className="max-w-md mx-auto">
-        <h2 className="text-lg font-bold mb-3">Research</h2>
+    <section id="research" className="py-10 px-4 border-t">
+      <div className="max-w-lg mx-auto">
+        <h2 className="text-xl font-bold mb-4">Research</h2>
         
         <p className="text-sm text-muted-foreground mb-6">
           Key references and foundational work
         </p>
 
-        <ul className="space-y-2 text-sm">
+        <ul className="space-y-2">
           {refs.map((ref, i) => (
-            <li key={i} className="py-2 border-b text-muted-foreground">
+            <li key={i} className="py-3 border-b text-sm text-muted-foreground">
               {ref}
             </li>
           ))}
