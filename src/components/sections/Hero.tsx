@@ -1,29 +1,25 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 
 export const Hero = () => {
   return (
-    <section className="min-h-[70vh] flex items-center px-4 py-8">
-      <div className="w-full max-w-md mx-auto">
-        <p className="text-[10px] uppercase tracking-widest text-muted-foreground mb-3">
-          NeRF • 3DGS
+    <section className="min-h-[60vh] flex items-center px-4 py-12">
+      <div className="w-full max-w-lg mx-auto">
+        <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">
+          Neural Radiance Fields
         </p>
 
-        <h1 className="text-2xl font-bold mb-2">Horizon</h1>
+        <h1 className="text-3xl font-bold mb-3">Horizon</h1>
 
-        <p className="text-xs text-muted-foreground mb-6 leading-relaxed">
-          3D scene reconstruction from images using Neural Radiance Fields
+        <p className="text-sm text-muted-foreground mb-8 leading-relaxed">
+          3D scene reconstruction from images using Neural Radiance Fields and 3D Gaussian Splatting.
         </p>
 
-        <div className="flex gap-2">
-          <Link to="/demo" className="flex-1">
-            <Button size="sm" className="w-full text-xs">
-              Demo
-              <ArrowRight className="ml-1 h-3 w-3" />
-            </Button>
+        <div className="flex gap-3">
+          <Link to="/demo">
+            <Button size="sm">Try Demo</Button>
           </Link>
-          <Button size="sm" variant="outline" className="flex-1 text-xs">
+          <Button size="sm" variant="outline">
             GitHub
           </Button>
         </div>

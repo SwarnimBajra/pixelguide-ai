@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Upload, ArrowLeft, X, Loader2 } from "lucide-react";
+import { ArrowLeft, X, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -70,7 +70,6 @@ const Demo = () => {
 
       toast.success(`Job created: ${data.id.slice(0, 8)}...`);
       
-      // Simulate processing
       setTimeout(() => {
         setIsProcessing(false);
         toast.success("Processing complete");
@@ -84,7 +83,8 @@ const Demo = () => {
 
   return (
     <div className="min-h-screen">
-      <header className="border-b px-4 py-3 flex items-center justify-between">
+      {/* Header */}
+      <header className="border-b px-4 py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 text-sm">
           <ArrowLeft className="w-4 h-4" />
           Back
@@ -93,14 +93,14 @@ const Demo = () => {
         <div className="w-12" />
       </header>
 
-      <div className="max-w-lg mx-auto px-4 py-6">
-        <h1 className="text-xl font-bold mb-1">Upload Images</h1>
-        <p className="text-xs text-muted-foreground mb-6">
-          Upload photos to generate 3D scene
+      <div className="max-w-lg mx-auto px-4 py-8">
+        <h1 className="text-2xl font-bold mb-2">Upload Images</h1>
+        <p className="text-sm text-muted-foreground mb-8">
+          Upload multiple photos to generate a 3D scene reconstruction.
         </p>
 
         {/* Upload area */}
-        <div className="border-2 border-dashed p-6 text-center mb-4">
+        <div className="border border-dashed p-8 text-center mb-6">
           <input
             type="file"
             multiple
@@ -112,21 +112,23 @@ const Demo = () => {
           />
           <label htmlFor="image-upload" className="cursor-pointer block">
             {isUploading ? (
-              <Loader2 className="w-8 h-8 mx-auto mb-2 animate-spin text-muted-foreground" />
+              <Loader2 className="w-6 h-6 mx-auto mb-3 animate-spin text-muted-foreground" />
             ) : (
-              <Upload className="w-8 h-8 mx-auto mb-2 text-muted-foreground" />
+              <div className="w-10 h-10 mx-auto mb-3 border flex items-center justify-center text-muted-foreground">
+                +
+              </div>
             )}
             <p className="text-sm text-muted-foreground">
-              {isUploading ? "Uploading..." : "Tap to upload"}
+              {isUploading ? "Uploading..." : "Select images"}
             </p>
           </label>
         </div>
 
         {/* Image previews */}
         {uploadedImages.length > 0 && (
-          <div className="mb-6">
-            <p className="text-xs text-muted-foreground mb-2">
-              {uploadedImages.length} image(s)
+          <div className="mb-8">
+            <p className="text-sm text-muted-foreground mb-3">
+              {uploadedImages.length} image(s) selected
             </p>
             <div className="grid grid-cols-3 gap-2">
               {uploadedImages.map((img, idx) => (
@@ -152,12 +154,11 @@ const Demo = () => {
         <Button
           onClick={handleProcess}
           className="w-full"
-          size="sm"
           disabled={isProcessing || uploadedImages.length === 0}
         >
           {isProcessing ? (
             <>
-              <Loader2 className="w-3 h-3 mr-2 animate-spin" />
+              <Loader2 className="w-4 h-4 mr-2 animate-spin" />
               Processing...
             </>
           ) : (
@@ -165,14 +166,14 @@ const Demo = () => {
           )}
         </Button>
 
-        {/* Info */}
-        <div className="mt-8 pt-6 border-t">
-          <h2 className="text-sm font-bold mb-2">How it works</h2>
-          <ul className="text-xs text-muted-foreground space-y-1">
+        {/* Instructions */}
+        <div className="mt-10 pt-8 border-t">
+          <h2 className="text-sm font-bold mb-3">Instructions</h2>
+          <ol className="text-sm text-muted-foreground space-y-2">
             <li>1. Upload multiple views of a scene</li>
             <li>2. Images are stored securely</li>
-            <li>3. NeRF pipeline generates 3D model</li>
-          </ul>
+            <li>3. NeRF pipeline generates the 3D model</li>
+          </ol>
         </div>
       </div>
     </div>
